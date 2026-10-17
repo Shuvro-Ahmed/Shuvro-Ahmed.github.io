@@ -1,0 +1,1622 @@
+{
+  "profile": {
+    "name": "Shuvro Ahmed",
+    "initials": "SA",
+    "email": "ahmedshuvro01@gmail.com",
+    "location": "Sundsvall, Sweden",
+    "role": "Erasmus Mundus scholar · Imaging / Visual AI",
+    "site_url": "https://shuvro-ahmed.github.io",
+    "github": "https://github.com/Shuvro-Ahmed",
+    "scholar": "https://scholar.google.com/citations?user=FdtAzuwAAAAJ&hl=en",
+    "linkedin": "https://www.linkedin.com/in/shuvro-ahmed-28553b235/",
+    "cv": "assets/pdf/shuvro-ahmed-cv.pdf",
+    "photo": "assets/img/shuvro-portrait.webp",
+    "photo_alt": "Portrait of Shuvro Ahmed",
+    "updated": "2026-10-16",
+    "updated_label": "October 2026",
+    "phd_notice": "Seeking PhD opportunities · Fall 2027",
+    "headline": "Computer vision.\nA wider perspective.",
+    "bio": "I’m Shuvro, an Erasmus Mundus scholar in Imaging, on the Visual AI track. I’m currently at Mid Sweden University, following my first year at Politecnico di Milano.",
+    "research_statement": "My interests span visual representation learning, image and video understanding, and 3D vision. I’m interested in building learning systems that make sense of complex visual data—and understanding where those systems succeed or fail.",
+    "personal_intro": "Away from research, I enjoy travelling, cricket, and historical fiction. Studying across countries has also made discovering new places and meeting new people a meaningful part of my life.",
+    "programme_url": "https://www.emjm-imaging.eu/"
+  },
+  "research": [
+    {
+      "id": "temporal-anomaly-detection",
+      "title": "Temporal learning for waste anomaly localization",
+      "short_title": "Learning from what stays consistent.",
+      "category": "Anomaly detection",
+      "status": "Ongoing research",
+      "period": "2026–present",
+      "institution": "Politecnico di Milano",
+      "summary": "Extending a hierarchical VQ-VAE-2 with temporal bottom-code consistency, normal-code repair, and decoder adaptation for reconstruction-based anomaly localization.",
+      "question": "Can information from consecutive normal frames improve anomaly localization without adding a new trainable network?",
+      "method": "The working framework starts from a trained hierarchical VQ-VAE-2. During adaptation, current-frame bottom codes are encouraged to agree with reliable, detached matches from a previous normal frame. A normal-code frequency rule then supplies an alternative reconstruction path; decoder-only adaptation and bounded RGB blending are investigated as further stages.",
+      "evaluation": "The study examines reconstruction-based localization and the effect of each adaptation stage. Comparative experiments and ablations focus on mean frame IoU, evaluation protocols, and failure cases.",
+      "limitation": "Code frequency is not a complete model of semantic normality: rare desired material may be altered, while an unwanted object can still use familiar codes. Both reconstruction paths retain the same top-level context.",
+      "next": "Continuing comparative experiments, ablations, and manuscript refinement, with particular attention to evaluation protocols and failure cases.",
+      "stage_note": "",
+      "pdf": "assets/pdf/temporal-code-consistency-working-draft.pdf",
+      "pdf_label": "Working draft",
+      "code": "https://github.com/Shuvro-Ahmed/Anamoly-waste-extension-polimi",
+      "image": "assets/img/temporal-architecture.png",
+      "image_alt": "Figure 1 from the working manuscript: temporal adaptation, normal-code repair, decoder adaptation, and single-frame inference with two shared-decoder paths.",
+      "caption": "Temporal adaptation, normal-code repair, and single-frame inference. Figure 1, working manuscript.",
+      "highlights": [
+        "Normal-only training",
+        "Temporal consistency",
+        "Single-frame inference"
+      ],
+      "manuscript_title": "Temporal Code Consistency and Normal-Code Repair for Reconstruction-Based Waste Anomaly Localization"
+    },
+    {
+      "id": "nvs-quality",
+      "title": "Perceptual quality of novel-view-synthesis videos",
+      "short_title": "Beyond the average quality score.",
+      "category": "3D vision · Perceptual quality",
+      "status": "Ongoing research",
+      "period": "2026–present",
+      "institution": "Mid Sweden University",
+      "summary": "Studying how local visual degradation and short low-quality intervals influence the agreement between objective quality metrics and human judgments of rendered videos.",
+      "question": "To what extent can local and temporal pooling improve agreement between objective quality scores and human judgments of novel-view-synthesis videos?",
+      "method": "The first stage compares conventional averaging with spatial-tail pooling and worst-window temporal pooling of existing quality metrics. Pooling settings are selected on training data rather than the test set. A second, exploratory stage considers a compact predictor using spatial image statistics, temporal signals such as optical flow or flicker, and optional learned features.",
+      "evaluation": "The plan is to compare predictions with human quality ratings, using scene-disjoint evaluation to assess generalization and prevent views from the same scene leaking across training and testing. It also examines conditions where alternative pooling does not help.",
+      "limitation": "The study will test whether emphasizing local defects and short low-quality intervals helps consistently across scenes, and where conventional averaging remains preferable.",
+      "next": "Implementing the pooling study, examining agreement with subjective ratings, and determining whether a learned predictor is justified by the evidence.",
+      "stage_note": "",
+      "pdf": "",
+      "pdf_label": "",
+      "code": "",
+      "image": "",
+      "image_alt": "",
+      "caption": "",
+      "highlights": [
+        "Novel-view synthesis",
+        "Human quality judgments",
+        "Spatial + temporal analysis"
+      ],
+      "manuscript_title": ""
+    }
+  ],
+  "projects": [
+    {
+      "id": "anomaly-segmentation",
+      "title": "Pixel-level anomaly segmentation in multi-view images",
+      "category": "Computer vision",
+      "eyebrow": "ADVANCED DEEP LEARNING",
+      "period": "2026",
+      "kind": "Course project",
+      "featured": true,
+      "summary": "A U-Net, DeepLabV3+, and SegFormer ensemble with synthetic anomaly generation and test-time augmentation.",
+      "problem": "Identify anomalous regions at pixel level in a multi-view image setting.",
+      "approach": "Combined U-Net, DeepLabV3+, and SegFormer models trained with real masks and synthetic anomalies. Flip and multi-scale test-time augmentation are followed by score-map fusion and post-processing.",
+      "outcome": "The final ensemble achieved a Pixel-AP of 0.9264 on the course challenge leaderboard.",
+      "context": "",
+      "metric": "0.9264",
+      "metric_label": "Leaderboard Pixel-AP",
+      "tags": [
+        "Segmentation",
+        "Ensembles",
+        "Synthetic anomalies"
+      ],
+      "code": "https://github.com/Shuvro-Ahmed/politecnico-di-milano-projects/tree/main/Advanced%20Deep%20Learning",
+      "art": "pixels",
+      "listed": true,
+      "sources": [
+        "Supplied newer CV, Projects section"
+      ],
+      "showcase": true,
+      "image": "assets/img/projects/anomaly-segmentation.webp",
+      "image_alt": "Qualitative anomaly-localization output showing a reference image, real defect, ground truth, individual model maps, and the fused prediction.",
+      "image_caption": "Reference image, real defect, ground truth, and model outputs. Figure 4, ADL challenge report.",
+      "links": []
+    },
+    {
+      "id": "vault-reconstruction",
+      "title": "Single-view 3D reconstruction of a ribbed cylindrical vault",
+      "category": "3D vision",
+      "eyebrow": "IMAGE ANALYSIS & COMPUTER VISION",
+      "period": "2025–2026",
+      "kind": "Course project",
+      "featured": true,
+      "summary": "Recovering vault geometry from one photograph using projective geometry, vanishing points, and geometric constraints.",
+      "problem": "Infer a three-dimensional architectural structure from a single two-dimensional view.",
+      "approach": "Used vanishing points, scene symmetries, and geometric constraints to calibrate the camera, rectify a cross-section, and recover points along a rib from a single photograph.",
+      "outcome": "Produced a single-view geometric reconstruction of the vault.",
+      "context": "",
+      "metric": "1 view",
+      "metric_label": "Geometric reconstruction",
+      "tags": [
+        "Projective geometry",
+        "Vanishing points",
+        "3D reconstruction"
+      ],
+      "code": "https://github.com/Shuvro-Ahmed/politecnico-di-milano-projects/tree/main/IACV",
+      "art": "geometry",
+      "listed": true,
+      "sources": [
+        "Supplied newer CV, Projects section"
+      ],
+      "showcase": true,
+      "image": "assets/img/projects/vault-reconstruction.webp",
+      "image_alt": "Annotated photograph of a ribbed vault with selected geometric lines used for single-view reconstruction.",
+      "image_caption": "Annotated input photograph showing the geometric features used for reconstruction. Figure 1, IACV report.",
+      "links": []
+    },
+    {
+      "id": "municipal-ifc",
+      "title": "Predicting municipal IFC with the GRINS dataset",
+      "category": "Statistics",
+      "eyebrow": "APPLIED STATISTICS",
+      "period": "2026",
+      "kind": "Course project",
+      "featured": true,
+      "summary": "Panel-aware LASSO and nested-region linear mixed-effects modelling for Italy’s municipal fragility index.",
+      "problem": "Predict municipal IFC from the GRINS data while accounting for repeated observations and regional structure.",
+      "approach": "Combined panel-aware variable selection with nested-region linear mixed-effects models. The model structure acknowledges that municipal observations do not form a simple independent sample.",
+      "outcome": "Reported cross-validated R²: 0.853.",
+      "context": "",
+      "metric": "0.853",
+      "metric_label": "Cross-validated R²",
+      "tags": [
+        "Mixed-effects models",
+        "LASSO",
+        "Panel data"
+      ],
+      "code": "https://github.com/Shuvro-Ahmed/politecnico-di-milano-projects/tree/main/Applied%20Statistics/IFC_Project",
+      "art": "matrix",
+      "listed": true,
+      "sources": [
+        "Supplied newer CV, Projects section"
+      ],
+      "showcase": true,
+      "image": "assets/img/projects/municipal-ifc.webp",
+      "image_alt": "Local spatial association maps of municipal employment in Italy, comparing 2018 and 2022.",
+      "image_caption": "Spatial employment structure in 2018 and 2022, from the GRINS and Resilience project poster.",
+      "links": []
+    },
+    {
+      "id": "drone-routing",
+      "title": "Four-drone route optimization for 3D inspection",
+      "category": "Optimization",
+      "eyebrow": "FOUNDATIONS OF OPERATIONS RESEARCH",
+      "period": "2025–2026",
+      "kind": "Course project",
+      "featured": true,
+      "summary": "Optimizing inspection routes for four drones, with exactly-once coverage and return-time objectives.",
+      "problem": "Coordinate four drones to cover a three-dimensional inspection task efficiently.",
+      "approach": "Formulated route and coverage constraints, with exactly-once inspection and an objective involving drone return time.",
+      "outcome": "An optimization formulation for coordinated four-drone inspection routes.",
+      "context": "",
+      "metric": "4 drones",
+      "metric_label": "Coordinated inspection",
+      "tags": [
+        "Routing",
+        "Constraints",
+        "Mathematical optimization"
+      ],
+      "code": "https://github.com/Shuvro-Ahmed/politecnico-di-milano-projects/tree/main/Foundation%20of%20Operations%20Research",
+      "art": "routes",
+      "listed": true,
+      "sources": [
+        "Supplied newer CV, Projects section"
+      ],
+      "showcase": true,
+      "links": []
+    },
+    {
+      "id": "temporal-anomaly-detection",
+      "title": "Temporal learning for waste anomaly localization",
+      "category": "Computer vision",
+      "period": "2026–present",
+      "kind": "Ongoing research",
+      "summary": "Extending a hierarchical VQ-VAE-2 with temporal bottom-code consistency, normal-code repair, and decoder adaptation for reconstruction-based anomaly localization.",
+      "problem": "Can information from consecutive normal frames improve anomaly localization without adding a new trainable network?",
+      "approach": "The working framework starts from a trained hierarchical VQ-VAE-2. During adaptation, current-frame bottom codes are encouraged to agree with reliable, detached matches from a previous normal frame. A normal-code frequency rule then supplies an alternative reconstruction path; decoder-only adaptation and bounded RGB blending are investigated as further stages.",
+      "outcome": "An ongoing study of temporal adaptation, normal-code repair, and decoder-only fine-tuning, with experiments and a working manuscript.",
+      "context": "",
+      "metric": "VQ-VAE-2",
+      "metric_label": "Temporal code consistency",
+      "tags": [
+        "Normal-only training",
+        "Temporal consistency",
+        "Single-frame inference"
+      ],
+      "code": "https://github.com/Shuvro-Ahmed/Anamoly-waste-extension-polimi",
+      "art": "pixels",
+      "featured": false,
+      "listed": true,
+      "eyebrow": "ONGOING RESEARCH",
+      "sources": [
+        "Existing approved research description and working manuscript / proposal context"
+      ],
+      "detail_path": "research/temporal-anomaly-detection.html",
+      "status": "Ongoing work",
+      "showcase": false,
+      "image": "assets/img/temporal-architecture.png",
+      "image_alt": "Architectural overview of temporal code consistency, normal-code repair, and bounded reconstruction.",
+      "image_caption": "Architecture figure from the current working manuscript.",
+      "links": []
+    },
+    {
+      "id": "nvs-quality",
+      "title": "Perceptual quality of novel-view-synthesis videos",
+      "category": "3D vision",
+      "period": "2026–present",
+      "kind": "Ongoing research",
+      "summary": "Studying how local visual degradation and short low-quality intervals influence the agreement between objective quality metrics and human judgments of rendered videos.",
+      "problem": "To what extent can local and temporal pooling improve agreement between objective quality scores and human judgments of novel-view-synthesis videos?",
+      "approach": "The first stage compares conventional averaging with spatial-tail pooling and worst-window temporal pooling of existing quality metrics. Pooling settings are selected on training data rather than the test set. A second, exploratory stage considers a compact predictor using spatial image statistics, temporal signals such as optical flow or flicker, and optional learned features.",
+      "outcome": "The pooling study is in progress, with a compact spatial–temporal predictor planned as a possible extension.",
+      "context": "",
+      "metric": "NVS",
+      "metric_label": "Perceptual quality study",
+      "tags": [
+        "Novel-view synthesis",
+        "Human quality judgments",
+        "Spatial + temporal analysis"
+      ],
+      "code": "",
+      "art": "geometry",
+      "featured": false,
+      "listed": true,
+      "eyebrow": "ONGOING RESEARCH",
+      "sources": [
+        "Existing approved research description and working manuscript / proposal context"
+      ],
+      "detail_path": "research/nvs-quality.html",
+      "status": "Ongoing work",
+      "showcase": false,
+      "links": []
+    },
+    {
+      "id": "pain-classification",
+      "title": "Pain-level classification from multivariate time series",
+      "category": "Machine learning",
+      "eyebrow": "NEURAL NETWORKS & DEEP LEARNING",
+      "period": "2025–2026",
+      "kind": "Course project",
+      "featured": false,
+      "summary": "CNN–BiGRU–Attention temporal modelling combined with LightGBM global motion features.",
+      "problem": "Classify pain levels from multivariate motion time series.",
+      "approach": "Combined a neural temporal model with global motion features processed by LightGBM. The two components capture complementary sequence-level and aggregate information.",
+      "outcome": "The final CNN–BiGRU–Attention and LightGBM ensemble achieved a macro-F1 of 0.9427 on the Kaggle course challenge.",
+      "context": "",
+      "metric": "0.9427",
+      "metric_label": "Leaderboard macro-F1",
+      "tags": [
+        "Time series",
+        "CNN–BiGRU",
+        "LightGBM"
+      ],
+      "code": "https://github.com/Shuvro-Ahmed/politecnico-di-milano-projects/tree/main/Artificial%20Neural%20Network%20and%20Deep%20Learning",
+      "art": "signal",
+      "listed": true,
+      "sources": [
+        "Supplied newer CV, Projects section"
+      ],
+      "showcase": false,
+      "links": []
+    },
+    {
+      "id": "histopathology",
+      "title": "Molecular subtype classification from histopathology images",
+      "category": "Computer vision",
+      "eyebrow": "NEURAL NETWORKS & DEEP LEARNING",
+      "period": "2025–2026",
+      "kind": "Course project",
+      "featured": false,
+      "summary": "A three-seed EfficientNet-B0 ensemble with image/mask pairs, region-of-interest cropping, and test-time augmentation.",
+      "problem": "Classify histopathology images into four molecular subtypes.",
+      "approach": "Used image/mask pairs to form region-of-interest crops, followed by EfficientNet-B0 models trained with three seeds and combined using an ensemble and test-time augmentation.",
+      "outcome": "The three-seed ensemble with test-time augmentation achieved a public-leaderboard macro-F1 of 0.3784.",
+      "context": "",
+      "metric": "0.3784",
+      "metric_label": "Leaderboard macro-F1",
+      "tags": [
+        "Histopathology",
+        "EfficientNet",
+        "ROI cropping"
+      ],
+      "code": "https://github.com/Shuvro-Ahmed/politecnico-di-milano-projects/tree/main/Artificial%20Neural%20Network%20and%20Deep%20Learning",
+      "art": "tiles",
+      "listed": true,
+      "sources": [
+        "Supplied newer CV, Projects section"
+      ],
+      "showcase": false,
+      "links": []
+    },
+    {
+      "id": "piano-reconstruction",
+      "title": "Visual reconstruction of played piano music",
+      "category": "Computer vision",
+      "eyebrow": "IMAGE ANALYSIS & COMPUTER VISION",
+      "period": "2025–2026",
+      "kind": "Course project",
+      "featured": false,
+      "summary": "Tracking hand landmarks and finger presses with MediaPipe to map fingertips to piano keys and reconstruct played notes.",
+      "problem": "Recover which notes are played from visual observations of piano performance.",
+      "approach": "Tracked hand landmarks and finger presses using MediaPipe, then mapped fingertip positions to piano keys to reconstruct the played note sequence.",
+      "outcome": "A vision-based pipeline connecting hand motion, key positions, and played notes.",
+      "context": "",
+      "metric": "Video → notes",
+      "metric_label": "Visual music reconstruction",
+      "tags": [
+        "MediaPipe",
+        "Hand tracking",
+        "Video understanding"
+      ],
+      "code": "https://github.com/Shuvro-Ahmed/politecnico-di-milano-projects/tree/main/IACV",
+      "art": "keys",
+      "listed": true,
+      "sources": [
+        "Supplied newer CV, Projects section"
+      ],
+      "showcase": false,
+      "links": []
+    },
+    {
+      "id": "sea-level-projections",
+      "title": "Physics-informed transfer learning for relative sea-level projections",
+      "category": "Machine learning",
+      "period": "Submitted manuscript",
+      "kind": "Research project",
+      "summary": "Physics-informed modelling and cross-regional transfer learning for relative sea-level projections in Bangladesh, Vietnam, and the Maldives, with vertical land motion and coastal-vulnerability analysis.",
+      "problem": "Study regional relative sea-level projections for Bangladesh, Vietnam, and the Maldives, including differences in data availability and vertical land motion.",
+      "approach": "The manuscript combines an LSTM-based forecasting framework, cross-regional transfer learning, physics-informed training constraints, vertical-land-motion corrections, and SHAP-based analysis. It examines both historical prediction and longer-horizon projection behaviour.",
+      "outcome": "A manuscript on relative sea-level forecasting, transfer learning, and coastal vulnerability across Bangladesh, Vietnam, and the Maldives. Submitted and under review.",
+      "context": "",
+      "metric": "3 nations",
+      "metric_label": "Relative sea-level study",
+      "tags": [
+        "Physics-informed learning",
+        "Transfer learning",
+        "Climate modelling"
+      ],
+      "code": "",
+      "art": "signal",
+      "featured": false,
+      "listed": true,
+      "eyebrow": "RESEARCH PROJECT",
+      "sources": [
+        "Supplied physics-informed sea-level manuscript, pp. 1–2, 18–21",
+        "Submission status confirmed by user"
+      ],
+      "pdf": "assets/pdf/sea-level-author-draft.pdf",
+      "pdf_label": "Author draft",
+      "status": "Under review",
+      "publication_id": "sea-level",
+      "showcase": false,
+      "image": "assets/img/projects/sea-level-projections.webp",
+      "image_alt": "Country-wise absolute and relative sea-level projections through 2050 for Bangladesh, Vietnam, and the Maldives.",
+      "image_caption": "Absolute and relative sea-level projections through 2050. Figure 8, author manuscript.",
+      "links": [
+        {
+          "label": "Paper",
+          "href": "publications.html#sea-level"
+        }
+      ]
+    },
+    {
+      "id": "wildfire-prediction",
+      "title": "Wildfire image classification with a convolutional Kolmogorov–Arnold network",
+      "category": "Computer vision",
+      "period": "2024",
+      "kind": "Research project",
+      "summary": "A CNN–KAN hybrid for classifying satellite images as wildfire or no wildfire.",
+      "problem": "Distinguish wildfire from non-wildfire observations in satellite imagery.",
+      "approach": "Combined convolutional feature extraction with Kolmogorov–Arnold network layers and compared the model with convolutional baselines.",
+      "outcome": "The KAN–CNN achieved 97.32% test accuracy in the published study.",
+      "context": "",
+      "metric": "97.32%",
+      "metric_label": "Reported test accuracy",
+      "tags": [
+        "Satellite imagery",
+        "CNN",
+        "Kolmogorov–Arnold networks"
+      ],
+      "code": "",
+      "art": "pixels",
+      "featured": false,
+      "listed": true,
+      "eyebrow": "RESEARCH PROJECT",
+      "sources": [
+        "Supplied IEEE wildfire paper, pp. 1 and 4–6"
+      ],
+      "publication_id": "wildfire",
+      "showcase": false,
+      "image": "assets/img/projects/wildfire-kan-cnn.webp",
+      "image_alt": "Diagram of the proposed convolutional Kolmogorov–Arnold network architecture.",
+      "image_caption": "Proposed KAN–CNN architecture. Figure 2, IEEE ICECE paper.",
+      "links": [
+        {
+          "label": "Paper",
+          "href": "publications.html#wildfire"
+        }
+      ]
+    },
+    {
+      "id": "carbon-footprint-forecasting",
+      "title": "Forecasting CO₂ emissions in Bangladesh with a Temporal Fusion Transformer",
+      "category": "Machine learning",
+      "period": "2023–2024 research · published 2026",
+      "kind": "Research project",
+      "summary": "Temporal Fusion Transformer modelling of Bangladesh’s annual carbon-emission series.",
+      "problem": "Forecast Bangladesh’s carbon emissions using the available historical time series.",
+      "approach": "Used annual Global Carbon Atlas observations from 1960–2021 and a Temporal Fusion Transformer, with temporal features and a quantile-based forecasting objective.",
+      "outcome": "The study led to the Forecasting Carbon Footprint conference paper in the ICICDS proceedings.",
+      "context": "",
+      "metric": "TFT",
+      "metric_label": "Annual-emission forecasting",
+      "tags": [
+        "Time series",
+        "Transformers",
+        "Environmental modelling"
+      ],
+      "code": "",
+      "art": "signal",
+      "featured": false,
+      "listed": true,
+      "eyebrow": "RESEARCH PROJECT",
+      "sources": [
+        "Older CV research period; supplied carbon manuscript pp. 4–7; existing publisher-verified metadata"
+      ],
+      "publication_id": "carbon-footprint",
+      "showcase": false,
+      "image": "assets/img/projects/carbon-tft.webp",
+      "image_alt": "Temporal Fusion Transformer quantile forecast showing observed and predicted carbon-emission values.",
+      "image_caption": "Temporal Fusion Transformer forecasting output. Figure 3, carbon-footprint author manuscript.",
+      "links": [
+        {
+          "label": "Paper",
+          "href": "publications.html#carbon-footprint"
+        }
+      ]
+    },
+    {
+      "id": "smart-retail-review",
+      "title": "Machine learning and optimization for smart retail: a systematic review",
+      "category": "Machine learning",
+      "period": "Submitted manuscript",
+      "kind": "Research project",
+      "summary": "A review covering forecasting, product placement, intelligent bots, transactions, blockchain, and queue management.",
+      "problem": "Organize the applications, methods, challenges, and research directions in smart-retail management.",
+      "approach": "Applied inclusion and exclusion criteria to screen the literature, then organized the selected studies by their retail-management application.",
+      "outcome": "Screened 271 papers and selected 67 studies in the author draft. The manuscript is under review.",
+      "context": "",
+      "metric": "67 studies",
+      "metric_label": "Studies reviewed",
+      "tags": [
+        "Systematic review",
+        "Retail management",
+        "Optimization"
+      ],
+      "code": "",
+      "art": "signal",
+      "featured": false,
+      "listed": true,
+      "eyebrow": "RESEARCH PROJECT",
+      "sources": [
+        "Supplied systematic-review manuscript, p. 1; newer CV status"
+      ],
+      "pdf": "assets/pdf/smart-retail-review-author-draft.pdf",
+      "pdf_label": "Author draft",
+      "publication_id": "smart-retail",
+      "status": "Under review",
+      "showcase": false,
+      "image": "assets/img/projects/smart-retail-review.webp",
+      "image_alt": "Taxonomy of smart-retail application areas and the methods reviewed in each area.",
+      "image_caption": "Smart-retail application areas and methods. Figure 1, review manuscript.",
+      "links": [
+        {
+          "label": "Paper",
+          "href": "publications.html#smart-retail"
+        }
+      ]
+    },
+    {
+      "id": "best-bike-paths-requirements",
+      "title": "Best Bike Paths: requirements analysis & specification",
+      "category": "Software",
+      "period": "2025–2026",
+      "kind": "Course deliverable",
+      "summary": "A requirements specification defining actors, use cases, functional and non-functional requirements, and system constraints for Best Bike Paths.",
+      "problem": "Specify what a route-management platform needs to do and the constraints its design must satisfy.",
+      "approach": "Documented actors, use cases, functional and non-functional requirements, and system constraints in a Requirements Analysis and Specification Document.",
+      "outcome": "A requirements-analysis deliverable for the Best Bike Paths software-engineering project.",
+      "context": "",
+      "metric": "RASD",
+      "metric_label": "Requirements specification",
+      "tags": [
+        "Requirements engineering",
+        "Use cases",
+        "System constraints"
+      ],
+      "code": "https://github.com/Shuvro-Ahmed/politecnico-di-milano-projects/tree/main/Software%20Engineering",
+      "art": "geometry",
+      "featured": false,
+      "listed": true,
+      "eyebrow": "COURSE DELIVERABLE",
+      "sources": [
+        "Supplied newer CV, Projects section"
+      ],
+      "related": [
+        {
+          "label": "Companion design document",
+          "href": "projects/best-bike-paths-design.html"
+        }
+      ],
+      "showcase": false,
+      "links": []
+    },
+    {
+      "id": "best-bike-paths-design",
+      "title": "Best Bike Paths: software architecture & design",
+      "category": "Software",
+      "period": "2025–2026",
+      "kind": "Course deliverable",
+      "summary": "A design document describing components, interfaces, the data model, and interaction flows for Best Bike Paths.",
+      "problem": "Translate the route-management requirements into a system design.",
+      "approach": "Designed the component architecture, interfaces, data model, and interaction flows in the Design Document.",
+      "outcome": "A software-design deliverable linked to the project’s requirements specification.",
+      "context": "",
+      "metric": "Design",
+      "metric_label": "Architecture & interfaces",
+      "tags": [
+        "Software architecture",
+        "Data modelling",
+        "Interaction flows"
+      ],
+      "code": "https://github.com/Shuvro-Ahmed/politecnico-di-milano-projects/tree/main/Software%20Engineering",
+      "art": "geometry",
+      "featured": false,
+      "listed": true,
+      "eyebrow": "COURSE DELIVERABLE",
+      "sources": [
+        "Supplied newer CV, Projects section"
+      ],
+      "related": [
+        {
+          "label": "Companion requirements document",
+          "href": "projects/best-bike-paths-requirements.html"
+        }
+      ],
+      "showcase": false,
+      "links": []
+    },
+    {
+      "id": "prediction-entropy-coding",
+      "title": "Prediction, transform coding, and entropy coding",
+      "category": "Image processing",
+      "period": "2026",
+      "kind": "Course lab",
+      "summary": "Spatial prediction, DCT/KLT experiments, and a Huffman–arithmetic coding comparison.",
+      "problem": "Examine how prediction, transforms, and entropy coding contribute to a compression pipeline.",
+      "approach": "Compared image and residual entropy, spatial predictors including MED, DCT/KLT representations, Huffman codeword lengths, and an implemented arithmetic bitstream coder.",
+      "outcome": "The report records successful arithmetic decoding for all tested symbol streams and compares sample payload lengths against empirical entropy.",
+      "context": "The coding comparison measures symbol payloads, excluding headers and probability models. Arithmetic streams were decoded and checked; Huffman lengths were computed from the code tree.",
+      "metric": "Lab 02",
+      "metric_label": "Prediction & entropy coding",
+      "tags": [
+        "MED predictor",
+        "DCT / KLT",
+        "Huffman / arithmetic"
+      ],
+      "code": "",
+      "art": "signal",
+      "featured": false,
+      "listed": true,
+      "eyebrow": "COURSE LAB",
+      "sources": [
+        "DT096A_Lab2_Editable_Report.docx, coding comparison and scope notes"
+      ],
+      "showcase": false,
+      "links": []
+    },
+    {
+      "id": "visual-representation-lab",
+      "title": "Sampling, quantization, and visual information",
+      "category": "Image processing",
+      "period": "2026",
+      "kind": "Course lab",
+      "summary": "Experiments connecting sampling, quantization, color representation, and information theory.",
+      "problem": "Investigate how digital representation changes image appearance and stored information.",
+      "approach": "Worked with downsampling and prefiltering, quantization and SQNR, and visual-information experiments in the Multidimensional Visual Representation and Compression lab.",
+      "outcome": "Experiments and a notebook-based report on representation and compression trade-offs.",
+      "context": "",
+      "metric": "Lab 01",
+      "metric_label": "Visual representation",
+      "tags": [
+        "Sampling",
+        "Quantization",
+        "Information theory"
+      ],
+      "code": "",
+      "art": "pixels",
+      "featured": false,
+      "listed": true,
+      "eyebrow": "COURSE LAB",
+      "sources": [
+        "DT096A Lab 1 materials and worked-example report"
+      ],
+      "showcase": false,
+      "links": []
+    },
+    {
+      "id": "migration-data-analysis",
+      "title": "Climate-related migration: data analysis and visualization",
+      "category": "Statistics",
+      "period": "Research began 2024",
+      "kind": "Research project",
+      "summary": "Python-based analysis and visualization of migration drivers in Bangladesh, including Sankey diagrams.",
+      "problem": "Examine the climate, socioeconomic, and other reported factors associated with migration.",
+      "approach": "Analyzed migration data in Python and used visual summaries, including Sankey diagrams, to examine reported drivers in the Rajshahi study context.",
+      "outcome": "Python analysis and visualizations for the study “Migration in the Lens of Sustainable Adaptation: A Tale of Two Slums in Bangladesh.”",
+      "context": "",
+      "metric": "Python",
+      "metric_label": "Migration-data analysis",
+      "tags": [
+        "Data analysis",
+        "Sankey diagrams",
+        "Climate & society"
+      ],
+      "code": "https://github.com/Shuvro-Ahmed/BBS-Research",
+      "art": "signal",
+      "featured": false,
+      "listed": true,
+      "eyebrow": "RESEARCH PROJECT",
+      "sources": [
+        "Supplied older CV, Projects / Research / Activities sections",
+        "https://github.com/Shuvro-Ahmed/BBS-Research"
+      ],
+      "showcase": false,
+      "links": []
+    },
+    {
+      "id": "ask-aarong",
+      "title": "AskAarong: an AI-assisted retail chatbot",
+      "category": "Software",
+      "eyebrow": "AARONG INTERNSHIP",
+      "period": "2023",
+      "kind": "Internship project",
+      "featured": false,
+      "summary": "An AI chatbot prototype for retail customer service, using GPT-3, Voiceflow, Zapier, and Figma.",
+      "problem": "Explore a conversational interface that can help customers obtain retail information.",
+      "approach": "Developed an AI-based chatbot during a software-engineering internship, with a Figma interface and a workflow built around Voiceflow and Zapier.",
+      "outcome": "A customer-service chatbot prototype and supporting interface designs developed during the Aarong internship.",
+      "context": "",
+      "metric": "Conversational AI",
+      "metric_label": "Retail prototype",
+      "tags": [
+        "NLP",
+        "Prototyping",
+        "Customer experience"
+      ],
+      "code": "https://github.com/Shuvro-Ahmed/AI-Chatbot-Aarong-Internship",
+      "art": "conversation",
+      "listed": true,
+      "sources": [
+        "Supplied newer CV, Projects section"
+      ],
+      "showcase": false,
+      "links": []
+    },
+    {
+      "id": "waitq-polimart",
+      "title": "WaitQ & Polimart: queue management and fraud-detection concepts",
+      "category": "Software",
+      "period": "May–August 2023",
+      "kind": "Internship project",
+      "summary": "Retail queue-management and fraud-detection design work for Aarong.",
+      "problem": "Explore ways to improve retail queue management and address fraud-detection needs.",
+      "approach": "Designed queue-management and fraud-detection concepts in Figma during the Aarong internship, including a queue-management proposal using YOLO.",
+      "outcome": "Interface designs and system proposals for WaitQ & Polimart.",
+      "context": "",
+      "metric": "Figma",
+      "metric_label": "Retail-system design",
+      "tags": [
+        "Queue management",
+        "Fraud detection",
+        "Prototyping"
+      ],
+      "code": "",
+      "art": "geometry",
+      "featured": false,
+      "listed": true,
+      "eyebrow": "INTERNSHIP PROJECT",
+      "sources": [
+        "Supplied older CV, Projects / Research / Activities sections",
+        "Supplied newer CV, Projects section"
+      ],
+      "related": [
+        {
+          "label": "Aarong internship",
+          "href": "career.html#aarong"
+        }
+      ],
+      "showcase": false,
+      "links": []
+    },
+    {
+      "id": "amazon-fine-food-reviews",
+      "title": "Amazon Fine Food Reviews: machine-learning case study",
+      "category": "Machine learning",
+      "period": "August–December 2023",
+      "kind": "Training case study",
+      "summary": "An Amazon Fine Food Reviews case study undertaken during the ITIL AI-engineering internship.",
+      "problem": "Work with a real-world review dataset as part of applied machine-learning and NLP training.",
+      "approach": "Worked with the Amazon Fine Food Reviews case study as part of the natural-language-processing and machine-learning training at ITIL.",
+      "outcome": "Case-study experience applying training concepts to review data.",
+      "context": "",
+      "metric": "Reviews",
+      "metric_label": "Applied ML case study",
+      "tags": [
+        "NLP",
+        "Review data",
+        "Applied machine learning"
+      ],
+      "code": "",
+      "art": "signal",
+      "featured": false,
+      "listed": true,
+      "eyebrow": "TRAINING CASE STUDY",
+      "sources": [
+        "Supplied older CV, Projects / Research / Activities sections"
+      ],
+      "related": [
+        {
+          "label": "ITIL internship",
+          "href": "career.html#itil"
+        }
+      ],
+      "showcase": false,
+      "links": []
+    },
+    {
+      "id": "nyc-taxi-demand",
+      "title": "New York City taxi-demand prediction: case study",
+      "category": "Machine learning",
+      "period": "August–December 2023",
+      "kind": "Training case study",
+      "summary": "A taxi-demand prediction case study completed as part of ITIL internship training.",
+      "problem": "Explore demand prediction using a real-world urban-mobility case study.",
+      "approach": "Worked on a New York City taxi-demand prediction case study during the AI-engineering internship.",
+      "outcome": "Applied case-study experience in a demand-prediction setting.",
+      "context": "",
+      "metric": "Demand",
+      "metric_label": "Urban-mobility case study",
+      "tags": [
+        "Demand prediction",
+        "Mobility data",
+        "Machine learning"
+      ],
+      "code": "",
+      "art": "signal",
+      "featured": false,
+      "listed": true,
+      "eyebrow": "TRAINING CASE STUDY",
+      "sources": [
+        "Supplied older CV, Projects / Research / Activities sections"
+      ],
+      "related": [
+        {
+          "label": "ITIL internship",
+          "href": "career.html#itil"
+        }
+      ],
+      "showcase": false,
+      "links": []
+    },
+    {
+      "id": "daily-sales-forecasting",
+      "title": "Daily sales forecasting in a supershop",
+      "category": "Machine learning",
+      "period": "2022–2023",
+      "kind": "Thesis component",
+      "summary": "Hybrid linear-regression and XGBoost forecasting of daily supermarket sales.",
+      "problem": "Predict future sales to support supermarket inventory decisions.",
+      "approach": "Compared linear regression, random forest, and XGBoost with hybrid models that combine a linear trend with residual prediction. The paper describes 211 training days and a 90-day test period.",
+      "outcome": "The linear-regression–XGBoost model achieved MAE 68.94, RMSE 77.48, and MAPE 0.09 in the published evaluation.",
+      "context": "",
+      "metric": "0.09",
+      "metric_label": "Reported MAPE",
+      "tags": [
+        "Sales forecasting",
+        "XGBoost",
+        "Hybrid regression"
+      ],
+      "code": "https://github.com/Shuvro-Ahmed/Daily-Sales-Forcasting",
+      "art": "signal",
+      "featured": false,
+      "listed": true,
+      "eyebrow": "THESIS COMPONENT",
+      "sources": [
+        "Newer and older CV; supplied hyperautomation paper pp. 3 and 7"
+      ],
+      "publication_id": "hyperautomation",
+      "related": [
+        {
+          "label": "Thesis overview",
+          "href": "projects/retail-hyperautomation.html"
+        }
+      ],
+      "showcase": false,
+      "links": [
+        {
+          "label": "Paper",
+          "href": "publications.html#hyperautomation"
+        }
+      ]
+    },
+    {
+      "id": "product-placement",
+      "title": "Product placement through market-basket analysis",
+      "category": "Machine learning",
+      "period": "2022–2023",
+      "kind": "Thesis component",
+      "summary": "Association-rule mining for supermarket product placement using FP-Growth, Apriori, and GSP.",
+      "problem": "Identify purchasing associations to inform how supermarket products are grouped and placed.",
+      "approach": "Compared association-rule mining approaches on supermarket transaction data, using support, confidence, lift, and execution-time measurements.",
+      "outcome": "FP-Growth generated product-category rules in 0.473 seconds at minimum support 0.03 in the recorded experiment.",
+      "context": "",
+      "metric": "FP-Growth",
+      "metric_label": "Market-basket analysis",
+      "tags": [
+        "Association rules",
+        "Product placement",
+        "Data mining"
+      ],
+      "code": "",
+      "art": "signal",
+      "featured": false,
+      "listed": true,
+      "eyebrow": "THESIS COMPONENT",
+      "sources": [
+        "Newer and older CV; supplied hyperautomation paper pp. 4–6"
+      ],
+      "publication_id": "hyperautomation",
+      "related": [
+        {
+          "label": "Thesis overview",
+          "href": "projects/retail-hyperautomation.html"
+        }
+      ],
+      "showcase": false,
+      "links": [
+        {
+          "label": "Paper",
+          "href": "publications.html#hyperautomation"
+        }
+      ]
+    },
+    {
+      "id": "retail-voice-bot",
+      "title": "A voice bot for supermarket customer queries",
+      "category": "Software",
+      "period": "2022–2023",
+      "kind": "Thesis component",
+      "summary": "A voice-query pipeline combining speech recognition, NLP-based matching, and local text-to-speech.",
+      "problem": "Answer customer queries through a voice-based supermarket interface.",
+      "approach": "The published workflow uses PyAudio and SpeechRecognition, spaCy tokenization and part-of-speech tagging, NLTK BLEU-based response matching, and pyttsx3 speech output.",
+      "outcome": "A voice-bot prototype with locally generated spoken responses.",
+      "context": "",
+      "metric": "Voice + NLP",
+      "metric_label": "Customer-query prototype",
+      "tags": [
+        "Speech interface",
+        "spaCy",
+        "pyttsx3"
+      ],
+      "code": "",
+      "art": "signal",
+      "featured": false,
+      "listed": true,
+      "eyebrow": "THESIS COMPONENT",
+      "sources": [
+        "Supplied hyperautomation paper pp. 4–5"
+      ],
+      "publication_id": "hyperautomation",
+      "related": [
+        {
+          "label": "Thesis overview",
+          "href": "projects/retail-hyperautomation.html"
+        }
+      ],
+      "showcase": false,
+      "links": [
+        {
+          "label": "Paper",
+          "href": "publications.html#hyperautomation"
+        }
+      ]
+    },
+    {
+      "id": "music-genre-classification",
+      "title": "Music-genre classification",
+      "category": "Machine learning",
+      "period": "September–December 2022",
+      "kind": "Course project",
+      "summary": "Neural-network genre classification with PCA-based dimensionality reduction and cross-validation.",
+      "problem": "Classify music genres from an audio-track dataset.",
+      "approach": "Used PCA and a neural-network classifier on a balanced dataset of 18,000 audio tracks, with cross-validation in the project evaluation.",
+      "outcome": "The project reported 93% classification accuracy on a balanced dataset of 18,000 audio tracks.",
+      "context": "",
+      "metric": "93%",
+      "metric_label": "Reported classification accuracy",
+      "tags": [
+        "Audio classification",
+        "PCA",
+        "Neural networks"
+      ],
+      "code": "https://github.com/Shuvro-Ahmed/Classification-of-Music-Genres",
+      "art": "signal",
+      "featured": false,
+      "listed": true,
+      "eyebrow": "COURSE PROJECT",
+      "sources": [
+        "Supplied older CV, Projects / Research / Activities sections",
+        "https://github.com/Shuvro-Ahmed/Classification-of-Music-Genres"
+      ],
+      "showcase": false,
+      "links": []
+    },
+    {
+      "id": "multi-vendor-store",
+      "title": "Multi-vendor online store",
+      "category": "Software",
+      "period": "January–April 2022",
+      "kind": "Course project",
+      "summary": "A Django-based platform for vendors to create personalized stores and manage product sales.",
+      "problem": "Support multiple vendors within an online-store platform.",
+      "approach": "Developed a Django-based application enabling vendors to create their own stores and manage product sales, as part of System Analysis and Design.",
+      "outcome": "A Django web application with vendor-specific stores and product-sales management.",
+      "context": "",
+      "metric": "Django",
+      "metric_label": "Multi-vendor platform",
+      "tags": [
+        "Web development",
+        "E-commerce",
+        "Django"
+      ],
+      "code": "",
+      "art": "geometry",
+      "featured": false,
+      "listed": true,
+      "eyebrow": "COURSE PROJECT",
+      "sources": [
+        "Supplied older CV, Projects / Research / Activities sections"
+      ],
+      "showcase": false,
+      "links": []
+    },
+    {
+      "id": "emergency-blood-bank",
+      "title": "Emergency blood-bank management system",
+      "category": "Software",
+      "period": "Undergraduate study",
+      "kind": "Course project",
+      "summary": "A PHP and database-backed software-engineering project for blood-bank management.",
+      "problem": "Build a web application organizing blood-bank information and requests.",
+      "approach": "The repository includes PHP application files, a SQL schema, donor and request-related pages, administrative files, and a Model–View–Controller directory structure.",
+      "outcome": "A PHP and SQL web application developed for the CSE470 software-engineering project.",
+      "context": "",
+      "metric": "PHP + SQL",
+      "metric_label": "Web-application project",
+      "tags": [
+        "PHP",
+        "Database design",
+        "Software engineering"
+      ],
+      "code": "https://github.com/Shuvro-Ahmed/CSE470_Final_Project",
+      "art": "geometry",
+      "featured": false,
+      "listed": true,
+      "eyebrow": "COURSE PROJECT",
+      "sources": [
+        "https://github.com/Shuvro-Ahmed/CSE470_Final_Project"
+      ],
+      "showcase": false,
+      "links": []
+    },
+    {
+      "id": "live-streaming-commerce",
+      "title": "Continuance intention in live-streaming commerce",
+      "category": "Statistics",
+      "period": "Conceptual study",
+      "kind": "Conceptual research",
+      "summary": "A conceptual framework concerning university students’ and office workers’ intention to continue using live-streaming commerce.",
+      "problem": "Understand continuance intention among university students and office workers using live-streaming commerce.",
+      "approach": "Explored a conceptual framework concerning the intention to continue using live-streaming commerce among university students and office workers.",
+      "outcome": "A conceptual research direction connecting consumer behaviour with live-streaming commerce.",
+      "context": "",
+      "metric": "Framework",
+      "metric_label": "Commerce-behaviour study",
+      "tags": [
+        "Consumer behaviour",
+        "Conceptual framework",
+        "Live-streaming commerce"
+      ],
+      "code": "",
+      "art": "signal",
+      "featured": false,
+      "listed": true,
+      "eyebrow": "CONCEPTUAL RESEARCH",
+      "sources": [
+        "Supplied older CV, Projects / Research / Activities sections"
+      ],
+      "showcase": false,
+      "links": []
+    },
+    {
+      "id": "cansat-team",
+      "title": "National CanSat competition: team participation",
+      "category": "Robotics",
+      "period": "During undergraduate study",
+      "kind": "Competition project",
+      "summary": "Team leadership for participation in a national CanSat competition.",
+      "problem": "Coordinate a student team participating in a national engineering competition.",
+      "approach": "Led a four-person team to participate in the national CanSat competition during undergraduate study.",
+      "outcome": "Competition-team participation and leadership experience.",
+      "context": "",
+      "metric": "4 people",
+      "metric_label": "Competition team",
+      "tags": [
+        "CanSat",
+        "Team leadership",
+        "Robotics"
+      ],
+      "code": "",
+      "art": "geometry",
+      "featured": false,
+      "listed": true,
+      "eyebrow": "COMPETITION PROJECT",
+      "sources": [
+        "Supplied older CV, Projects / Research / Activities sections"
+      ],
+      "related": [
+        {
+          "label": "Robotics Club role",
+          "href": "community.html#robu"
+        }
+      ],
+      "showcase": false,
+      "links": []
+    },
+    {
+      "id": "academy-notebooks",
+      "title": "Algorithms and machine-learning notebooks",
+      "category": "Machine learning",
+      "period": "Undergraduate learning archive",
+      "kind": "Notebook collection",
+      "summary": "Exercises in graph search, game-tree search, genetic algorithms, preprocessing, and supervised learning.",
+      "problem": "Build practical familiarity with fundamental algorithms and machine-learning workflows.",
+      "approach": "The Academy repository preserves exercises in breadth-first search, A* search, alpha–beta pruning, genetic algorithms, data preprocessing, regression, and classification, alongside CSE341 materials.",
+      "outcome": "A linked archive of learning notebooks and course materials.",
+      "context": "",
+      "metric": "Foundations",
+      "metric_label": "Algorithms & ML notebooks",
+      "tags": [
+        "Graph search",
+        "Genetic algorithms",
+        "Machine learning"
+      ],
+      "code": "https://github.com/Shuvro-Ahmed/Academy",
+      "art": "signal",
+      "featured": false,
+      "listed": true,
+      "eyebrow": "NOTEBOOK COLLECTION",
+      "sources": [
+        "https://github.com/Shuvro-Ahmed/Academy"
+      ],
+      "modules": [
+        {
+          "label": "Breadth-first search",
+          "href": "https://github.com/Shuvro-Ahmed/Academy/tree/main/BFS"
+        },
+        {
+          "label": "A* search — Romanian problem",
+          "href": "https://github.com/Shuvro-Ahmed/Academy"
+        },
+        {
+          "label": "Alpha–beta pruning",
+          "href": "https://github.com/Shuvro-Ahmed/Academy/tree/main/Alpha-beta%20pruning"
+        },
+        {
+          "label": "Genetic algorithms",
+          "href": "https://github.com/Shuvro-Ahmed/Academy/tree/main/Genetic%20Algorithm"
+        },
+        {
+          "label": "Cricketers — genetic algorithm notebook",
+          "href": "https://github.com/Shuvro-Ahmed/Academy/blob/main/Cricketers_GENETIC_ALGORITHM.ipynb"
+        },
+        {
+          "label": "Data preprocessing",
+          "href": "https://github.com/Shuvro-Ahmed/Academy/tree/main/Data%20Pre-Processing"
+        },
+        {
+          "label": "Linear regression & data visualization",
+          "href": "https://github.com/Shuvro-Ahmed/Academy/tree/main/Linear%20Regression%20%26%20Data%20Visualization"
+        },
+        {
+          "label": "SVM, MLP, and random forest",
+          "href": "https://github.com/Shuvro-Ahmed/Academy/tree/main/SVM%2CMLP%2CRandom%20Forest"
+        },
+        {
+          "label": "CSE341 materials",
+          "href": "https://github.com/Shuvro-Ahmed/Academy/tree/main/cse341"
+        }
+      ],
+      "showcase": false,
+      "links": []
+    },
+    {
+      "id": "best-bike-paths",
+      "title": "Best Bike Paths: requirements and software architecture",
+      "category": "Software",
+      "eyebrow": "SOFTWARE ENGINEERING 2",
+      "period": "2025–2026",
+      "kind": "Course project",
+      "featured": false,
+      "summary": "Requirements analysis and a design document for a bicycle-route management platform.",
+      "problem": "Specify the behaviour and architecture of a route-management platform before implementation.",
+      "approach": "Developed actors, use cases, functional and non-functional requirements, and system constraints. The design document covers components, interfaces, the data model, and interaction flows.",
+      "outcome": "A requirements specification and architectural design for Best Bike Paths.",
+      "context": "",
+      "metric": "2 documents",
+      "metric_label": "Requirements + design",
+      "tags": [
+        "Requirements",
+        "Architecture",
+        "System design"
+      ],
+      "code": "https://github.com/Shuvro-Ahmed/politecnico-di-milano-projects/tree/main/Software%20Engineering",
+      "art": "architecture",
+      "listed": false,
+      "sources": [
+        "Supplied newer CV, Projects section"
+      ],
+      "related": [
+        {
+          "label": "Requirements analysis & specification",
+          "href": "projects/best-bike-paths-requirements.html"
+        },
+        {
+          "label": "Software architecture & design",
+          "href": "projects/best-bike-paths-design.html"
+        }
+      ],
+      "showcase": false,
+      "links": []
+    },
+    {
+      "id": "retail-hyperautomation",
+      "title": "Retail hyperautomation: forecasting, placement, and a voice bot",
+      "category": "Machine learning",
+      "eyebrow": "BACHELOR’S THESIS",
+      "period": "2022–2023",
+      "kind": "Thesis project",
+      "featured": false,
+      "summary": "Hybrid sales forecasting, association-rule mining, and a voice interface for supermarket operations.",
+      "problem": "Explore machine-learning approaches to product demand, product placement, and customer queries in a supermarket.",
+      "approach": "Investigated a hybrid linear regression–XGBoost forecasting model, compared association-rule mining algorithms including FP-Growth, and developed a voice bot using NLP and speech tools.",
+      "outcome": "The published study reports linear–XGBoost MAE of 68.94, RMSE of 77.48, and MAPE of 0.09. It also reports an FP-Growth runtime of 0.473 seconds for category-level rules at minimum support 0.03.",
+      "context": "",
+      "metric": "3 components",
+      "metric_label": "Forecasting · mining · voice",
+      "tags": [
+        "Forecasting",
+        "FP-Growth",
+        "NLP"
+      ],
+      "code": "https://github.com/Shuvro-Ahmed/Daily-Sales-Forcasting",
+      "art": "signal",
+      "listed": false,
+      "sources": [
+        "Supplied newer CV, Projects section"
+      ],
+      "related": [
+        {
+          "label": "Daily sales forecasting",
+          "href": "projects/daily-sales-forecasting.html"
+        },
+        {
+          "label": "Product placement",
+          "href": "projects/product-placement.html"
+        },
+        {
+          "label": "Voice bot",
+          "href": "projects/retail-voice-bot.html"
+        }
+      ],
+      "showcase": false,
+      "image": "assets/img/projects/retail-hyperautomation.webp",
+      "image_alt": "Observed and forecast supermarket sales from the hybrid forecasting experiments.",
+      "image_caption": "Observed and predicted daily supermarket sales using linear regression–XGBoost. Figure 9, Engineering Proceedings paper.",
+      "links": []
+    }
+  ],
+  "publications": [
+    {
+      "id": "carbon-footprint",
+      "status": "published",
+      "title": "Forecasting Carbon Footprint: Temporal Fusion Transformer Modeling for Predicting CO₂ Emissions in Bangladesh",
+      "authors": "Shuvro Ahmed, Neda Firoz, Mohammad Sadman Tahsin, and David Akpuluma",
+      "year": "2026",
+      "venue": "Innovations in Cybersecurity and Data Science · ICICDS 2025 · Springer",
+      "details": "Conference paper, pp. 387–401. Published online 3 June 2026.",
+      "summary": "Temporal Fusion Transformer modelling for carbon-emission forecasting in Bangladesh.",
+      "pdf": "",
+      "doi": "10.1007/978-3-032-12243-8_26"
+    },
+    {
+      "id": "wildfire",
+      "status": "published",
+      "title": "Wildfire Prediction using Convolutional Kolmogorov-Arnold Network",
+      "authors": "Rawhatur Rabbi, Joy Datta, Shuvro Ahmed, and Aniqua Nusrat Zereen",
+      "year": "2024",
+      "venue": "13th International Conference on Electrical and Computer Engineering · IEEE ICECE",
+      "details": "Conference paper, pp. 667–672.",
+      "summary": "A convolutional and Kolmogorov–Arnold network approach to wildfire image classification.",
+      "pdf": "",
+      "doi": "10.1109/ICECE64886.2024.11024794"
+    },
+    {
+      "id": "hyperautomation",
+      "status": "published",
+      "title": "Hyperautomation in Super Shop Using Machine Learning",
+      "authors": "Shuvro Ahmed, Joy Karmoker, Rajesh Mojumder, Md. Mahmudur Rahman, Md. Golam Rabiul Alam, and Md Tanzim Reza",
+      "year": "2023",
+      "venue": "Engineering Proceedings · 39(1), 63 · ITISE 2023",
+      "details": "Proceeding paper. Published 6 July 2023.",
+      "summary": "Machine-learning forecasting, association-rule mining, and a voice interface for supermarket operations.",
+      "pdf": "",
+      "doi": "10.3390/engproc2023039063"
+    },
+    {
+      "id": "smart-retail",
+      "status": "under-review",
+      "title": "A Systematic Review on Machine Learning and Optimization Theories for Smart Retail Management System: Applications, Methods, Challenges, and Future Research Directions",
+      "authors": "",
+      "year": "",
+      "venue": "Manuscript under review",
+      "details": "Author draft. The submitted manuscript is under review; this draft may differ from the submitted version.",
+      "summary": "A systematic review of machine learning and optimization for retail operations, spanning forecasting, product placement, intelligent bots, transactions, blockchain, and queue management.",
+      "pdf": "assets/pdf/smart-retail-review-author-draft.pdf",
+      "doi": ""
+    },
+    {
+      "id": "sea-level",
+      "status": "under-review",
+      "title": "A Physics-Informed Transfer Learning framework for Relative Sea-Level Projections: Quantifying Vertical Land Motion Amplification and Coastal Vulnerability in Three Vulnerable Coastal Nations",
+      "authors": "Joy Karmoker, Shuvro Ahmed, and Md. Golam Rabiul Alam",
+      "year": "",
+      "venue": "Manuscript under review",
+      "details": "Author draft. The submitted manuscript is under review; this draft may differ from the submitted version.",
+      "summary": "Physics-informed modelling and cross-regional transfer learning for relative sea-level projections in Bangladesh, Vietnam, and the Maldives, with vertical land motion and coastal-vulnerability analysis.",
+      "pdf": "assets/pdf/sea-level-author-draft.pdf",
+      "doi": ""
+    }
+  ],
+  "education": [
+    {
+      "title": "Erasmus Mundus Joint Master in Imaging",
+      "subtitle": "Visual AI track · Fully funded scholarship",
+      "period": "2025–2027 (expected)",
+      "location": "Milan, Italy → Sundsvall, Sweden",
+      "description": "One joint master’s programme with an international study path: first year at Politecnico di Milano and second year at Mid Sweden University.",
+      "items": [
+        {
+          "name": "Mid Sweden University",
+          "detail": "Second year · from August 2026",
+          "body": "Studies in advanced image processing, multidimensional visual representation and compression, and quantitative research."
+        },
+        {
+          "name": "Politecnico di Milano",
+          "detail": "First year · from September 2025",
+          "body": "Image Analysis and Computer Vision; Advanced Deep Learning; Artificial Neural Networks and Deep Learning; multimedia and video signals; statistics; computing infrastructure; operations research; software engineering."
+        }
+      ],
+      "links": [
+        {
+          "href": "https://www.emjm-imaging.eu/",
+          "label": "Official EMJM Imaging programme"
+        },
+        {
+          "href": "https://www.bracu.ac.bd/news/brac-university-cse-alumnus-awarded-erasmus-mundus-joint-masters-scholarship",
+          "label": "Scholarship announcement"
+        }
+      ]
+    },
+    {
+      "title": "B.Sc. in Computer Science & Engineering",
+      "subtitle": "BRAC University",
+      "period": "2018–2023",
+      "location": "Dhaka, Bangladesh",
+      "description": "CGPA 3.77/4.00 · High Distinction · Dean’s List and Vice-Chancellor’s List recognition on five occasions.",
+      "items": [
+        {
+          "name": "Bachelor’s thesis",
+          "detail": "Retail hyperautomation",
+          "body": "Machine-learning sales forecasting, product-placement analysis, and a voice bot for supermarket operations."
+        }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "id": "bbs",
+      "role": "Teaching Assistant",
+      "organization": "BRAC Business School, BRAC University",
+      "period": "Started October 2023",
+      "location": "Dhaka, Bangladesh",
+      "status": "Former role",
+      "description": "Tutorial teaching in Introduction to Computer Science and Introduction to Statistics, alongside Python-based analysis of business and migration data.",
+      "contributions": [
+        "Conducted tutorials in CSE101: Introduction to Computer Science and STA101: Introduction to Statistics.",
+        "Supported advising and registration processes serving more than 3,000 students.",
+        "Analyzed business and migration data in Python."
+      ],
+      "links": [
+        {
+          "label": "Migration analysis",
+          "href": "projects/migration-data-analysis.html"
+        },
+        {
+          "label": "BBS research materials",
+          "href": "https://github.com/Shuvro-Ahmed/BBS-Research"
+        }
+      ],
+      "sources": [
+        "Newer and older CV, professional experience",
+        "BRAC University announcement, 4 September 2025, describes the role as former; exact end date not supplied"
+      ]
+    },
+    {
+      "id": "itil",
+      "role": "AI Engineer Intern",
+      "organization": "ITIL",
+      "period": "August–December 2023",
+      "location": "Dhaka, Bangladesh",
+      "status": "Internship",
+      "description": "Machine-learning and natural-language-processing training and experimentation, including unsupervised learning and clustering.",
+      "contributions": [
+        "Participated in World Bank-funded machine-learning and NLP training workshops.",
+        "Designed and applied unsupervised-learning techniques, including K-means clustering.",
+        "Worked on Amazon Fine Food Reviews and New York City taxi-demand prediction case studies."
+      ],
+      "links": [
+        {
+          "label": "Review-data case study",
+          "href": "projects/amazon-fine-food-reviews.html"
+        },
+        {
+          "label": "Taxi-demand case study",
+          "href": "projects/nyc-taxi-demand.html"
+        }
+      ],
+      "sources": [
+        "Supplied older CV, Projects / Research / Activities sections",
+        "Supplied newer CV, Projects section"
+      ]
+    },
+    {
+      "id": "aarong",
+      "role": "Software Engineer Intern",
+      "organization": "Aarong",
+      "period": "May–August 2023",
+      "location": "Dhaka, Bangladesh",
+      "status": "Internship",
+      "description": "An AI-based customer-service chatbot and a proposed queue-management system combining design work with computer-vision concepts.",
+      "contributions": [
+        "Developed AskAarong, a retail chatbot using GPT-3, Voiceflow, Zapier, and Figma.",
+        "Proposed and designed queue-management and fraud-detection concepts, documented as WaitQ & Polimart.",
+        "Explored computer-vision concepts, including YOLO, in queue-management proposals."
+      ],
+      "links": [
+        {
+          "label": "AskAarong",
+          "href": "projects/ask-aarong.html"
+        },
+        {
+          "label": "WaitQ & Polimart",
+          "href": "projects/waitq-polimart.html"
+        }
+      ],
+      "sources": [
+        "Supplied older CV, Projects / Research / Activities sections",
+        "Supplied newer CV, Projects section",
+        "https://github.com/Shuvro-Ahmed/AI-Chatbot-Aarong-Internship"
+      ]
+    },
+    {
+      "id": "physics-tutor",
+      "role": "Student Tutor",
+      "organization": "Mathematics and Natural Sciences, BRAC University",
+      "period": "May–December 2022",
+      "location": "Dhaka, Bangladesh",
+      "status": "Academic support",
+      "description": "Physics consultation and assignment grading for more than 160 students across introductory physics courses.",
+      "contributions": [
+        "Provided consultation for PHY101: Introduction to Physics and PHY111: Principles of Physics I.",
+        "Supported more than 160 students across the two courses and graded their assignments."
+      ],
+      "links": [],
+      "sources": [
+        "Supplied newer CV, Projects section"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Erasmus Mundus scholarship",
+      "date": "2025–2027",
+      "detail": "Fully funded scholarship for the Joint Master in Imaging."
+    },
+    {
+      "title": "BRAC University merit scholarship",
+      "date": "2020–2022",
+      "detail": "Academic merit scholarship during undergraduate study."
+    }
+  ],
+  "service": [
+    {
+      "id": "icip",
+      "title": "IEEE International Conference on Image Processing",
+      "role": "Conference volunteer",
+      "date": "September 2026 · Tampere, Finland",
+      "detail": "Volunteered at ICIP 2026. Also attended the short course on image signal processors and camera-control algorithms.",
+      "sources": [
+        "Supplied newer CV, Projects section"
+      ]
+    },
+    {
+      "id": "buddy",
+      "title": "Politecnico di Milano Buddy Project",
+      "role": "Volunteer",
+      "date": "From February 2026 · Milan, Italy",
+      "detail": "Participated as a volunteer in the university’s Buddy Project.",
+      "sources": [
+        "Supplied newer CV, Projects section"
+      ]
+    },
+    {
+      "id": "robu",
+      "title": "Robotics Club of BRAC University",
+      "role": "Junior Executive",
+      "date": "January 2020–December 2021 · Dhaka, Bangladesh",
+      "detail": "Worked on marketing and sponsorship activities for TRACTION 2020 and helped organize project proposals. Led a four-person team for national CanSat competition participation.",
+      "link": {
+        "label": "CanSat team experience",
+        "href": "projects/cansat-team.html"
+      },
+      "sources": [
+        "Supplied older CV, Projects / Research / Activities sections",
+        "Supplied newer CV, Projects section"
+      ]
+    }
+  ],
+  "interests": [
+    {
+      "title": "Travel",
+      "subtitle": "A change of scene.",
+      "description": "I enjoy travelling and discovering places beyond my day-to-day routine. Living and studying in different countries has made exploration part of my education, too.",
+      "number": "01"
+    },
+    {
+      "title": "Cricket",
+      "subtitle": "Away from the screen.",
+      "description": "Cricket is one of my long-standing interests outside academic work.",
+      "number": "02"
+    },
+    {
+      "title": "Historical fiction",
+      "subtitle": "Other times, other perspectives.",
+      "description": "I enjoy reading historical fiction and spending time with stories set in different periods.",
+      "number": "03"
+    },
+    {
+      "title": "Choir",
+      "subtitle": "Learning to listen together.",
+      "description": "I’ve recently joined a student choir in Sundsvall, singing in the lower voice range—bass/baritone.",
+      "number": "04"
+    }
+  ],
+  "places": [
+    {
+      "city": "Dhaka",
+      "country": "Bangladesh",
+      "description": "Undergraduate study, early research, and teaching."
+    },
+    {
+      "city": "Milan",
+      "country": "Italy",
+      "description": "The first year of my Erasmus Mundus journey."
+    },
+    {
+      "city": "Sundsvall",
+      "country": "Sweden",
+      "description": "My current base for the second year of the programme."
+    }
+  ],
+  "gallery": [
+    {
+      "src": "assets/img/life/italian-coast.webp",
+      "alt": "Shuvro beside the colorful hillside buildings of a seaside village on the Italian coast.",
+      "caption": "Cinque Terre"
+    },
+    {
+      "src": "assets/img/life/friends.webp",
+      "alt": "A group of friends together at an indoor gathering.",
+      "caption": "TARC with Swedish characteristics"
+    },
+    {
+      "src": "assets/img/life/venice.webp",
+      "alt": "A gondola passes the Basilica di Santa Maria della Salute beside a canal in Venice.",
+      "caption": "Venice, Italy"
+    },
+    {
+      "src": "assets/img/life/outdoors.webp",
+      "alt": "Friends enjoying a group activity on a grassy field.",
+      "caption": "Chug, chug, chug!"
+    },
+    {
+      "src": "assets/img/life/coastal-cove.webp",
+      "alt": "Turquoise water in a small coastal cove between cliffs, seen from a high pathway.",
+      "caption": "On the coast"
+    },
+    {
+      "src": "assets/img/life/winter-by-rail.webp",
+      "alt": "A red train curves beside snow-covered mountains, seen from a train window.",
+      "caption": "Winter by rail"
+    },
+    {
+      "src": "assets/img/life/friends-wedding.webp",
+      "alt": "Black-and-white photograph of four friends wearing traditional formal clothing together at a wedding celebration.",
+      "caption": "Weeding celebration of my best friend, getting old!"
+    },
+    {
+      "src": "assets/img/life/san-marino-towers.webp",
+      "alt": "Medieval stone tower perched high on a rocky hilltop in San Marino, with countryside stretching into the distance.",
+      "caption": "One tower to the next, San Marino."
+    }
+  ],
+  "training": [
+    {
+      "title": "Image Signal Processors & Camera Control Algorithms (3A+)",
+      "provider": "IEEE ICIP 2026 · Short course",
+      "date": "2026"
+    },
+    {
+      "title": "EDGE–AI Training Program",
+      "provider": "Institute of Information Technology, University of Dhaka",
+      "date": ""
+    },
+    {
+      "title": "Microsoft Excel: Beginner to Professional",
+      "provider": "Aarong",
+      "date": ""
+    },
+    {
+      "title": "Business Communication and Professionalism at Workplace",
+      "provider": "Aarong",
+      "date": ""
+    },
+    {
+      "title": "Website Design & Development",
+      "provider": "Creative IT",
+      "date": ""
+    },
+    {
+      "title": "Basics of Robotics",
+      "provider": "Robotics Club of BRAC University",
+      "date": ""
+    },
+    {
+      "title": "Basics of Animated Film Making",
+      "provider": "Charuputhi",
+      "date": ""
+    }
+  ]
+}

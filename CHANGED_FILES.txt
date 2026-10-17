@@ -1,0 +1,4 @@
+Changed: site/personal.html, source/content.json
+Added: site/assets/img/life/friends-wedding.webp, site/assets/img/life/san-marino-towers.webp
+Removed: none
+Other website and package files: byte-for-byte unchanged
