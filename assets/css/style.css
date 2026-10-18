@@ -67,3 +67,15 @@ html[data-theme=dark]{--paper:#162520;--card:#1b2c26;--ink:#eef0e6;--text:#dce1d
 @media(max-width:640px){.sidebar{padding-top:12px}.home-projects,.featured-grid{grid-template-columns:1fr;gap:20px}.project-image,.project-cover{height:190px}.project-card h3{font-size:21px}.project-card-content{padding:22px}.project-result{min-height:51px;padding:12px 20px}.project-row,.project-row.has-thumbnail{grid-template-columns:minmax(0,1fr);gap:15px;padding-block:25px}.project-thumb{display:none}.project-row h3{font-size:19px}.project-row p{font-size:13px}.project-list{margin-top:30px}.project-row .eyebrow{font-size:9px}.project-row-bottom{gap:12px}.project-row .text-link{min-height:40px}.research-preview{margin:-22px -22px 20px}.career-entry{grid-template-columns:1fr;gap:13px;padding-block:26px}.career-entry h2,.community-entry h2{font-size:29px}.community-entry{padding-block:25px}.article-figure .figure-frame{padding:6px}.article-figure img{max-height:none}.article-figure figcaption{font-size:10px}.contact-link{min-height:118px}.project-area{font-size:21px}.publication-section{margin-top:29px}}
 @media(prefers-reduced-motion:reduce){.project-card:hover{transform:none}}
 @media print{.project-list{margin-top:25px}.project-thumb{display:none}.project-row.has-thumbnail{grid-template-columns:1fr}.project-row,.career-entry,.community-entry{break-inside:avoid}.home-projects .project-card:last-child{display:flex}}
+
+/* Replace SA initials with the profile photo */
+.monogram {
+  background: url("../img/shuvro-portrait.webp")
+              center 35% / cover no-repeat;
+  font-size: 0;
+}
+
+/* Remove large photo from homepage */
+.now-card .profile-photo {
+  display: none;
+}
